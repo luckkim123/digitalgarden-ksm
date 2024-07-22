@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/1-area/11-study/111-coding/error-fix/open3-d-warning-glfw-error/","tags":["Study/Coding/solution"]}
+{"dg-publish":true,"permalink":"/1-area/11-study/111-coding/error-fix/open3-d-warning-glfw-error/","tags":["Study/Coding/solution"],"noteIcon":"","created":"2024-07-09, 17:13"}
 ---
 
 # 문제 발생

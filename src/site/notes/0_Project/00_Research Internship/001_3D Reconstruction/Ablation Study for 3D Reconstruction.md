@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/0-project/00-research-internship/001-3-d-reconstruction/ablation-study-for-3-d-reconstruction/","tags":["Project","Project/Stereo2PCD"]}
+{"dg-publish":true,"permalink":"/0-project/00-research-internship/001-3-d-reconstruction/ablation-study-for-3-d-reconstruction/","tags":["Project","Project/Stereo2PCD"],"noteIcon":"","created":"2024-07-09, 01:47"}
 ---
 
 # Overview

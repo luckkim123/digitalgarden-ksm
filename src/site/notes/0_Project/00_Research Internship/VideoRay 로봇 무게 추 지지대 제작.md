@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/0-project/00-research-internship/video-ray/","tags":["Project"]}
+{"dg-publish":true,"permalink":"/0-project/00-research-internship/video-ray/","tags":["Project"],"noteIcon":"","created":"2024-07-09, 01:47"}
 ---
 
 # Overview

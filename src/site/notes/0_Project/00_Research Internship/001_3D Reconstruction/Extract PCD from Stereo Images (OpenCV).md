@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/0-project/00-research-internship/001-3-d-reconstruction/extract-pcd-from-stereo-images-open-cv/","tags":["Study/Coding","Project/Stereo2PCD"]}
+{"dg-publish":true,"permalink":"/0-project/00-research-internship/001-3-d-reconstruction/extract-pcd-from-stereo-images-open-cv/","tags":["Study/Coding","Project/Stereo2PCD"],"noteIcon":"","created":"2024-06-27, 16:01"}
 ---
 
 

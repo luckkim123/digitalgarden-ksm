@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/1-area/11-study/111-coding/python-exif/","tags":["Study/Camera"]}
+{"dg-publish":true,"permalink":"/1-area/11-study/111-coding/python-exif/","tags":["Study/Camera"],"noteIcon":"","created":"2024-07-09, 02:25"}
 ---
 
 # EXIF (EXchangeble Image file Format)

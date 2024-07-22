@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/3-archive/30-fleeting-notes/figure/","tags":["Project"]}
+{"dg-publish":true,"permalink":"/3-archive/30-fleeting-notes/figure/","tags":["Project"],"noteIcon":"","created":"2024-07-16"}
 ---
 
 # Overview
