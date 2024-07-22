@@ -1,5 +1,5 @@
 ---
-{"date":"2024-07-09, 01:47","status":"Project","tags":["Project"],"aliases":null,"keywords":null,"related notes":null,"reference":null,"author":null,"url":null,"dg-publish":true,"dg-pass-frontmatter":true,"permalink":"/0-project/00-research-internship/video-ray/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/0-project/00-research-internship/video-ray/","tags":["Project"]}
 ---
 
 # Overview

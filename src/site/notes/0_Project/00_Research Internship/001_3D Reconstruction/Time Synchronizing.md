@@ -1,5 +1,5 @@
 ---
-{"date":"2024-07-09, 01:47","status":"Project","tags":["Project","Project/Stereo2PCD"],"aliases":null,"keywords":null,"related notes":null,"reference":null,"author":null,"url":null,"dg-publish":true,"permalink":"/0-project/00-research-internship/001-3-d-reconstruction/time-synchronizing/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/0-project/00-research-internship/001-3-d-reconstruction/time-synchronizing/","tags":["Project","Project/Stereo2PCD"]}
 ---
 
 - [Evernote](https://www.evernote.com/shard/s515/sh/07e72a43-ebf0-bcdb-9998-539d9d9df5c7/h1JE9gPgLl1KRIXs1mTqPr9IzYUACmdIqTy34fD4-e4-gg-F8pcNufh8DQ)

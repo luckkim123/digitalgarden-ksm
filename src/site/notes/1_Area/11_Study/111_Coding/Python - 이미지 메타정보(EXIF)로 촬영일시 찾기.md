@@ -1,5 +1,5 @@
 ---
-{"date":"2024-07-09, 02:25","status":"Permanent","tags":["Study/Camera"],"aliases":["시간 동기화","TimeSync"],"keywords":null,"related notes":null,"reference":null,"author":null,"url":null,"dg-publish":true,"permalink":"/1-area/11-study/111-coding/python-exif/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/1-area/11-study/111-coding/python-exif/","tags":["Study/Camera"]}
 ---
 
 # EXIF (EXchangeble Image file Format)

@@ -1,5 +1,5 @@
 ---
-{"date":"2024-07-09, 01:47","status":"Project","tags":["Project","Project/Stereo2PCD"],"aliases":null,"keywords":null,"related notes":null,"reference":null,"author":null,"url":null,"dg-publish":true,"permalink":"/0-project/00-research-internship/001-3-d-reconstruction/ablation-study-for-3-d-reconstruction/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/0-project/00-research-internship/001-3-d-reconstruction/ablation-study-for-3-d-reconstruction/","tags":["Project","Project/Stereo2PCD"]}
 ---
 
 # Overview

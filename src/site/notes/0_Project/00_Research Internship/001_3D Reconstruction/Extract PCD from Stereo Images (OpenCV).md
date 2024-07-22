@@ -1,5 +1,5 @@
 ---
-{"date":"2024-06-27, 16:01","status":"Permanent","tags":["Study/Coding","Project/Stereo2PCD"],"aliases":["Extract PCD from stereo images","StereoSGBM_create"],"keywords":null,"related notes":null,"reference":null,"author":null,"url":["https://github.com/opencv/opencv/blob/master/samples/python/stereo_match.py","https://leechamin.tistory.com/362"],"dg-publish":true,"permalink":"/0-project/00-research-internship/001-3-d-reconstruction/extract-pcd-from-stereo-images-open-cv/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/0-project/00-research-internship/001-3-d-reconstruction/extract-pcd-from-stereo-images-open-cv/","tags":["Study/Coding","Project/Stereo2PCD"]}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"date":"2024-07-16","status":"Project","tags":["Project"],"aliases":null,"keywords":null,"related notes":null,"reference":null,"author":null,"url":null,"dg-publish":true,"permalink":"/3-archive/30-fleeting-notes/figure/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/3-archive/30-fleeting-notes/figure/","tags":["Project"]}
 ---
 
 # Overview
