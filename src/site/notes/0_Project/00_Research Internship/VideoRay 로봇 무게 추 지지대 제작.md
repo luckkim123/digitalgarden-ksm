@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/0-project/00-research-internship/video-ray/","tags":["Project"],"dgShowLocalGraph":true,"dgShowFileTree":true,"dgEnableSearch":true,"dgShowToc":true}
+{"dg-publish":true,"permalink":"/0-project/00-research-internship/video-ray/","tags":["Project","gardenEntry"],"dgShowLocalGraph":true,"dgShowFileTree":true,"dgEnableSearch":true,"dgShowToc":true}
 ---
 
 # Overview
@@ -68,4 +68,3 @@
 
 # Resource
 ---
-
