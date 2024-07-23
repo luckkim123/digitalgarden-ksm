@@ -21,7 +21,7 @@
 ### Key Objectives
 - ==기존에는 5mm 아크릴 판에 M3 볼트로 로봇과 고정==하였는데 ==결국 1mm 부분만 무게 추를 지지==하였기 때문에 아크릴 판이 부서짐
 	- 볼트가 지지대에 가하는 힘을 최대한 분산하여 오래 버틸 수 있도록 함
-- 지지대 부분에 자석을 고정시킬 수 있는 부분 추가가
+- 지지대 부분에 자석을 고정시킬 수 있는 부분 추가
 
 <br/><br/>
 
@@ -65,6 +65,24 @@
 	- 주의사항: 오토레벨링이 실패할 경우 프린터기가 동작하지 않기 때문에, 항상 확인하고 퇴근할 것
 		- 오토레벨링 (Auto Leveling)
 		  3D 프린터기가 물체가 잘 출력되도록 팔레트의 수평을 맞추는 작업
+
+<br/>
+
+### Issues - 채우기 밀도
+- 3D 프린터를 사용하여 출력한 결과물이 사용할 수 없을 정도로 밀도가 낮았음
+	- GCODE를 생성할 때 일반 품질, 일반 밀도로 설정하였는데, 일반 밀도의 채우기 밀도는 겨우 20%이며, 고밀도의 채우기 밀도 또한 40% 밖에 되지 않음
+
+#### Solutions
+- 출력 옵션에서 레이어 높이를 0.1mm, 채우기 밀도를 85%로 수정하여 재출력하였
+![3_Archive/31_Attachments/Pasted image 20240722150557.png|+grid](/img/user/3_Archive/31_Attachments/Pasted%20image%2020240722150557.png)![3_Archive/31_Attachments/Pasted image 20240722150631.png|+grid](/img/user/3_Archive/31_Attachments/Pasted%20image%2020240722150631.png)
+
+<br/>
+
+## Results
+![3_Archive/31_Attachments/Pasted image 20240722151019.png|+grid](/img/user/3_Archive/31_Attachments/Pasted%20image%2020240722151019.png)![3_Archive/31_Attachments/Part1 1.png|+grid](/img/user/3_Archive/31_Attachments/Part1%201.png)
+
+- 무게추와 자석의 위치를 조정하였으며, 받침판의 높이 등 세부적인 치수를 조정하여 로봇과 안정적으로 체결될 수 있도록 수정하였음
+
 
 # Resource
 ---
