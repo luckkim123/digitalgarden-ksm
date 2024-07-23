@@ -58,44 +58,48 @@ Translation Matrix:
 
 ### Results of 3D Reconstruction
 
-
 - 1m
-
 ![3_Archive/31_Attachments/000000.JPG_imgL.jpg|+grid](/img/user/3_Archive/31_Attachments/000000.JPG_imgL.jpg)![3_Archive/31_Attachments/000000.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/31_Attachments/000000.JPG_imgL_undist.jpg)
-<center style="font-size: 12; opacity: 0.7">Original / Undistorted</center>
+<center style="font-size: 12; opacity: 0.7">Original / Undistorted</center><br/>
 
 ![3_Archive/31_Attachments/000000.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/31_Attachments/000000.JPG_imgL_rect.jpg)![3_Archive/31_Attachments/000000.JPG_disparity.jpg|+grid](/img/user/3_Archive/31_Attachments/000000.JPG_disparity.jpg)
-<center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center>
+<center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center><br/>
+
 
 ![3_Archive/31_Attachments/제목 없는 동영상.gif](/img/user/3_Archive/31_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81.gif)
+
+<br/>
 
 - 2m
 
 ![3_Archive/31_Attachments/000001.JPG_imgL.jpg|+grid](/img/user/3_Archive/31_Attachments/000001.JPG_imgL.jpg)![3_Archive/31_Attachments/000001.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/31_Attachments/000001.JPG_imgL_undist.jpg)
-<center style="font-size: 12; opacity: 0.7">Original / Undistorted</center>
+<center style="font-size: 12; opacity: 0.7">Original / Undistorted</center><br/>
 
 ![3_Archive/31_Attachments/000001.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/31_Attachments/000001.JPG_imgL_rect.jpg)![3_Archive/31_Attachments/000001.JPG_disparity.jpg|+grid](/img/user/3_Archive/31_Attachments/000001.JPG_disparity.jpg)
-<center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center>
+<center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center><br/>
 
+![3_Archive/31_Attachments/제목 없는 동영상 (1).gif](/img/user/3_Archive/31_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(1).gif)
+<br/>
 
-
-- 3m![3_Archive/31_Attachments/제목 없는 동영상 (1).gif](/img/user/3_Archive/31_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(1).gif)
+- 3m
 
 ![3_Archive/31_Attachments/000002.JPG_imgL.jpg|+grid](/img/user/3_Archive/31_Attachments/000002.JPG_imgL.jpg)![3_Archive/31_Attachments/000002.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/31_Attachments/000002.JPG_imgL_undist.jpg)
-<center style="font-size: 12; opacity: 0.7">Original / Undistorted</center>
+<center style="font-size: 12; opacity: 0.7">Original / Undistorted</center><br/>
 
 ![3_Archive/31_Attachments/000002.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/31_Attachments/000002.JPG_imgL_rect.jpg)![3_Archive/31_Attachments/000002.JPG_disparity.jpg|+grid](/img/user/3_Archive/31_Attachments/000002.JPG_disparity.jpg)
-<center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center>
+<center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center><br/>
 
 ![3_Archive/31_Attachments/제목 없는 동영상 (2).gif](/img/user/3_Archive/31_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(2).gif)
+
+<br/>
 
 - 3m - undistortion 과정 제외
 
 ![3_Archive/31_Attachments/000002_2.JPG_imgL.jpg|+grid](/img/user/3_Archive/31_Attachments/000002_2.JPG_imgL.jpg)![3_Archive/31_Attachments/000002_2.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/31_Attachments/000002_2.JPG_imgL_undist.jpg)
-<center style="font-size: 12; opacity: 0.7">Original / Undistorted</center>
+<center style="font-size: 12; opacity: 0.7">Original / Undistorted</center><br/>
 
 ![3_Archive/31_Attachments/000002_2.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/31_Attachments/000002_2.JPG_imgL_rect.jpg)![3_Archive/31_Attachments/000002_2.JPG_disparity.jpg|+grid](/img/user/3_Archive/31_Attachments/000002_2.JPG_disparity.jpg)
-<center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center>
+<center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center><br/>
 
 ![3_Archive/31_Attachments/제목 없는 동영상 1.gif](/img/user/3_Archive/31_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%201.gif)
 
@@ -135,34 +139,39 @@ Translation Matrix:
 
 ### Results of 3D Reconstruction
 
-
 - 1m
 
 ![3_Archive/31_Attachments/000003.JPG_imgL.jpg|+grid](/img/user/3_Archive/31_Attachments/000003.JPG_imgL.jpg)![3_Archive/31_Attachments/000003.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/31_Attachments/000003.JPG_imgL_undist.jpg)
 <center style="font-size: 12; opacity: 0.7">Original / Undistorted</center>
+<br/>
 
 ![3_Archive/31_Attachments/000003.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/31_Attachments/000003.JPG_imgL_rect.jpg)![3_Archive/31_Attachments/000003.JPG_disparity.jpg|+grid](/img/user/3_Archive/31_Attachments/000003.JPG_disparity.jpg)
-<center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center>
+<center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center><br/>
+
 
 ![3_Archive/31_Attachments/제목 없는 동영상 (1) 1.gif](/img/user/3_Archive/31_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(1)%201.gif)
+
+<br/>
 
 - 2m
 
 ![3_Archive/31_Attachments/000004.JPG_imgL.jpg|+grid](/img/user/3_Archive/31_Attachments/000004.JPG_imgL.jpg)![3_Archive/31_Attachments/000004.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/31_Attachments/000004.JPG_imgL_undist.jpg)
-<center style="font-size: 12; opacity: 0.7">Original / Undistorted</center>
+<center style="font-size: 12; opacity: 0.7">Original / Undistorted</center><br/>
 
 ![3_Archive/31_Attachments/000004.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/31_Attachments/000004.JPG_imgL_rect.jpg)![3_Archive/31_Attachments/000004.JPG_disparity.jpg|+grid](/img/user/3_Archive/31_Attachments/000004.JPG_disparity.jpg)
-<center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center>
+<center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center><br/>
 
 ![3_Archive/31_Attachments/제목 없는 동영상 (2) 1.gif](/img/user/3_Archive/31_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(2)%201.gif)
 
-- 3m
+<br/>
 
+- 3m
 ![3_Archive/31_Attachments/000005.JPG_imgL.jpg|+grid](/img/user/3_Archive/31_Attachments/000005.JPG_imgL.jpg)![3_Archive/31_Attachments/000005.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/31_Attachments/000005.JPG_imgL_undist.jpg)
-<center style="font-size: 12; opacity: 0.7">Original / Undistorted</center>
+<center style="font-size: 12; opacity: 0.7">Original / Undistorted</center><br/>
 
 ![3_Archive/31_Attachments/000005.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/31_Attachments/000005.JPG_imgL_rect.jpg)![3_Archive/31_Attachments/000005.JPG_disparity.jpg|+grid](/img/user/3_Archive/31_Attachments/000005.JPG_disparity.jpg)
-<center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center>
+<center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center><br/>
+
 
 ![3_Archive/31_Attachments/제목 없는 동영상 (3).gif](/img/user/3_Archive/31_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(3).gif)
 
@@ -175,10 +184,10 @@ Translation Matrix:
 		- 위 문제를 명확하게 하기 위해 한쪽 조명을 끄고 동일한 조건(3m)하에 진행해보았으나, 사진이 어두워 픽셀 간 차이가 적어서 그런지 거리를 거의 계산하지 못함
 
 ![3_Archive/31_Attachments/000005.JPG_imgL 1.jpg|+grid](/img/user/3_Archive/31_Attachments/000005.JPG_imgL%201.jpg)![3_Archive/31_Attachments/000005.JPG_imgL_undist 1.jpg|+grid](/img/user/3_Archive/31_Attachments/000005.JPG_imgL_undist%201.jpg)
-<center style="font-size: 12; opacity: 0.7">Original / Undistorted</center>
+<center style="font-size: 12; opacity: 0.7">Original / Undistorted</center><br/>
 
 ![3_Archive/31_Attachments/000005.JPG_imgL_rect 1.jpg|+grid](/img/user/3_Archive/31_Attachments/000005.JPG_imgL_rect%201.jpg)![3_Archive/31_Attachments/000005.JPG_disparity 1.jpg|+grid](/img/user/3_Archive/31_Attachments/000005.JPG_disparity%201.jpg)
-<center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center>
+<center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center><br/>
 
 ![3_Archive/31_Attachments/제목 없는 동영상 (4).gif](/img/user/3_Archive/31_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(4).gif)
 
