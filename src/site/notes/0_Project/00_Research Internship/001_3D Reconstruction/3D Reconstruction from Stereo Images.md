@@ -4,7 +4,6 @@
 
 - [Evernote](https://www.evernote.com/shard/s515/sh/a1ebdaac-9a64-3b3b-e770-b1543c9a5f6b/qIz3RpnuFc5hSHTRQYZcixyTk6e7nKCVKzhXDEYUbAXuje1fesA0VE1lCw)
 # Overview
----
 ### Purpose
 - ==스테레오 카메라 이미지를 통해 포인트 클라우드 데이터(PCD)를 생성==하는 방법을 연구하고, 이를 해양 환경에서 소나(Sonar) 센서와 함께 사용할 수 있도록 연구
 
@@ -22,7 +21,7 @@
 
 <br/><br/>
 # Progress
----
+
 [[0_Project/00_Research Internship/001_3D Reconstruction/Kanban - 3D Reconstruction from Stereo Images\|진행 현황]]
 <br/>
 ## Undistortion
