@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/0-project/00-research-internship/001-3-d-reconstruction/stereo-calibration/","tags":["Project","Project/Stereo2PCD"],"noteIcon":"","created":"2024-07-09, 01:47"}
+{"dg-publish":true,"permalink":"/0-project/00-research-internship/001-3-d-reconstruction/stereo-calibration/","tags":["Project","Project/Stereo2PCD"],"noteIcon":"","created":"2024-07-09"}
 ---
 
 - [Evernote](https://www.evernote.com/shard/s515/sh/3f586871-a7a9-d195-943c-f2b6f0aa830c/Bk850BxaddK85K-Q27CGX3xInL4AYbuC7i6nuUKX5K7vTG3Grh98G32IUg)

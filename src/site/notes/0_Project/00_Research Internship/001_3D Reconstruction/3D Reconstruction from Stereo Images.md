@@ -1,17 +1,7 @@
 ---
-date: 2024-07-09, 01:47
-status: Project
-tags:
-  - Project
-  - Project/Stereo2PCD
-aliases: 
-keywords: 
-related notes: 
-reference: 
-author: 
-url: 
-dg-publish: true
+{"dg-publish":true,"permalink":"/0-project/00-research-internship/001-3-d-reconstruction/3-d-reconstruction-from-stereo-images/","tags":["Project","Project/Stereo2PCD"],"noteIcon":"","created":"2024-07-09"}
 ---
+
 - [Evernote](https://www.evernote.com/shard/s515/sh/a1ebdaac-9a64-3b3b-e770-b1543c9a5f6b/qIz3RpnuFc5hSHTRQYZcixyTk6e7nKCVKzhXDEYUbAXuje1fesA0VE1lCw)
 # Overview
 ### Purpose
