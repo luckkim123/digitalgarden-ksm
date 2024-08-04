@@ -18,7 +18,7 @@
 ### Key Objectives
 1. Baseline 10cm, 20cm에서 [[0_Project/00_Research Internship/001_3D Reconstruction/Stereo Calibration\|Stereo Calibration]]수행
 2. 1m, 2m, 3m 거리의 물체를 촬영하고, [[0_Project/00_Research Internship/001_3D Reconstruction/3D Reconstruction from Stereo Images\|3D Reconstruction from Stereo Images]]을 수행하여 결과 비교
-3. [[0_Project/00_Research Internship/001_3D Reconstruction/Extract PCD from Stereo Images (OpenCV)#cv2.StereoSGBM_create 파라미터\|cv2.StereoSGBM_create]]의 파라미터를 수정하여 최적의 값 찾기
+3. [[1_Area/11_Study/111_Coding/OpenCV/stereoSGBM_create\|cv2.stereoSGBM_create]]의 파라미터를 수정하여 최적의 값 찾기
 
 <br/><br/>
 
@@ -199,7 +199,7 @@ Translation Matrix:
 <br/><br/>
 
 ## cv2.StreoSGBM_create
-[[0_Project/00_Research Internship/001_3D Reconstruction/Extract PCD from Stereo Images (OpenCV)\|StereoSGBM_create]]
+[[1_Area/11_Study/111_Coding/OpenCV/stereoSGBM_create\|Stereo SGBM]]
 
 
 [[3_Archive/32_Daily Notes/2024-07-11\|2024-07-11]]

@@ -112,7 +112,7 @@ def matching(imgL_rect, imgR_rect):
     return disp
 ```
 
-- `cv2.StereoSGBM_create`: 스테레오 매칭 알고리즘(SGBM) 생성. [[0_Project/00_Research Internship/001_3D Reconstruction/Extract PCD from Stereo Images (OpenCV)#cv2 StereoSGBM_create 파라미터\|cv2.StereoSGBM_create]]
+- `cv2.StereoSGBM_create`: 스테레오 매칭 알고리즘([[1_Area/11_Study/111_Coding/OpenCV/stereoSGBM_create\|Stereo SGBM]]) 생성. 
 - `cv2.ximgproc.createRightMatcher`: 오른쪽 매칭 생성.
 - `cv2.ximgproc.createDisparityWLSFilter`: 좌우 디스패리티를 조화롭게 필터링.
 - `cv2.normalize`: 결과 디스패리티 맵을 정규화.
