@@ -30,5 +30,5 @@
 ---
 # Resource
 
-- [[1_Area/11_Study/111_Coding/Python - 이미지 메타정보(EXIF)로 촬영일시 찾기\|Python - 이미지 메타정보(EXIF)로 촬영일시 찾기]]
+- [[1_Area/11_Study/111_Coding/Python/Python - 이미지 메타정보(EXIF)로 촬영일시 찾기\|Python - 이미지 메타정보(EXIF)로 촬영일시 찾기]]
 
