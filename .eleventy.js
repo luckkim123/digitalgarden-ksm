@@ -7,6 +7,8 @@ const tocPlugin = require("eleventy-plugin-nesting-toc");
 const { parse } = require("node-html-parser");
 const htmlMinifier = require("html-minifier-terser");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const path = require("path");
+const markdownIt = require("markdown-it");
 
 const { headerToId, namedHeadingsFilter } = require("./src/helpers/utils");
 const {
@@ -33,76 +35,95 @@ function getAnchorLink(filePath, linkTitle) {
   const {attributes, innerHTML} = getAnchorAttributes(filePath, linkTitle);
   return `<a ${Object.keys(attributes).map(key => `${key}="${attributes[key]}"`).join(" ")}>${innerHTML}</a>`;
 }
+module.exports = function(eleventyConfig) {
+  
+  eleventyConfig.addCollection("notes", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/site/notes/**/*.md");
+  });
 
-function getAnchorAttributes(filePath, linkTitle) {
-  let fileName = filePath.replaceAll("&amp;", "&");
-  let header = "";
-  let headerLinkPath = "";
-  if (filePath.includes("#")) {
-    [fileName, header] = filePath.split("#");
-    headerLinkPath = `#${headerToId(header)}`;
-  }
+  eleventyConfig.addFilter("slugify", function(str) {
+    return str.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)+/g, "");
+  });
 
-  let noteIcon = process.env.NOTE_ICON_DEFAULT;
-  const title = linkTitle ? linkTitle : fileName;
-  let permalink = `/notes/${slugify(filePath)}`;
-  let deadLink = false;
+  eleventyConfig.addFilter("permalink", function(filepath) {
+    const parsedPath = path.parse(filepath);
+    return `/notes/${parsedPath.dir.replace("./src/site/notes", "").toLowerCase()}/${parsedPath.name}/index.html`;
+  });
 
-  try {
-    const startPath = "./src/site/notes/";
-    const fullPath = fileName.endsWith(".md")
-      ? `${startPath}${fileName}`
-      : `${startPath}${fileName}.md`;
-    const file = fs.readFileSync(fullPath, "utf8");
-    const frontMatter = matter(file);
-
-    if (frontMatter.data.permalink) {
-      permalink = frontMatter.data.permalink;
+  function getAnchorAttributes(filePath, linkTitle) {
+    let fileName = filePath.replaceAll("&amp;", "&");
+    let header = "";
+    let headerLinkPath = "";
+    if (filePath.includes("#")) {
+      [fileName, header] = filePath.split("#");
+      headerLinkPath = `#${headerToId(header)}`;
     }
 
-    let permalinkExists = fs.existsSync(`./dist${permalink}${headerLinkPath}`);
-    let suffix = 1;
-    while (permalinkExists) {
-      permalink = `${frontMatter.data.permalink || `/notes/${slugify(filePath)}`}-${suffix}`;
-      permalinkExists = fs.existsSync(`./dist${permalink}${headerLinkPath}`);
-      suffix++;
+    let noteIcon = process.env.NOTE_ICON_DEFAULT;
+    const title = linkTitle ? linkTitle : fileName;
+    let permalink = `/notes/${slugify(filePath)}`;
+    let deadLink = false;
+    try {
+      const startPath = "./src/site/notes/";
+      const fullPath = fileName.endsWith(".md")
+        ? `${startPath}${fileName}`
+        : `${startPath}${fileName}.md`;
+      const file = fs.readFileSync(fullPath, "utf8");
+      const frontMatter = matter(file);
+      if (frontMatter.data.permalink) {
+        permalink = frontMatter.data.permalink;
+      }
+      const permalinkExists = fs.existsSync(`./dist${permalink}${headerLinkPath}`);
+      if (permalinkExists) {
+        permalink = `/notes/${slugify(filePath)}-${new Date().getTime()}`;
+      }
+      if (
+        frontMatter.data.tags &&
+        frontMatter.data.tags.indexOf("gardenEntry") != -1
+      ) {
+        permalink = "/";
+      }
+      if (frontMatter.data.noteIcon) {
+        noteIcon = frontMatter.data.noteIcon;
+      }
+    } catch {
+      deadLink = true;
     }
 
-    if (
-      frontMatter.data.tags &&
-      frontMatter.data.tags.indexOf("gardenEntry") != -1
-    ) {
-      permalink = "/";
+    if (deadLink) {
+      return {
+        attributes: {
+          "class": "internal-link is-unresolved",
+          "href": "/404",
+          "target": "",
+        },
+        innerHTML: title,
+      }
     }
-    if (frontMatter.data.noteIcon) {
-      noteIcon = frontMatter.data.noteIcon;
-    }
-  } catch {
-    deadLink = true;
-  }
-
-  if (deadLink) {
     return {
       attributes: {
-        "class": "internal-link is-unresolved",
-        "href": "/404",
+        "class": "internal-link",
         "target": "",
+        "data-note-icon": noteIcon,
+        "href": `${permalink}${headerLinkPath}`,
       },
       innerHTML: title,
-    };
+    }
   }
 
   return {
-    attributes: {
-      "class": "internal-link",
-      "target": "",
-      "data-note-icon": noteIcon,
-      "href": `${permalink}${headerLinkPath}`,
+    dir: {
+      input: "src/site",
+      output: "dist",
+      includes: "_includes",
+      data: "_data",
     },
-    innerHTML: title,
+    templateFormats: ["njk", "md", "11ty.js"],
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: false,
+    passthroughFileCopy: true,
   };
-}
-
+};
 
 const tagRegex = /(^|\s|\>)(#[^\s!@#$%^&*()=+\.,\[{\]};:'"?><]+)(?!([^<]*>))/g;
 
