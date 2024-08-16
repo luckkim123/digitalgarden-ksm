@@ -5,7 +5,7 @@
 
 ## Completed Tasks
 
-- [ ] [[0_Project/00_Research Internship/로봇 무게 추 지지대 제작\|로봇 무게 추 지지대 제작]]
+- [ ] [[0_Project/00_Research Internship/002_VideoRay/로봇 무게 추 지지대 제작\|로봇 무게 추 지지대 제작]]
 
 
 ## Current Status
