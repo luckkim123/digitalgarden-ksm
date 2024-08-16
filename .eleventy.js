@@ -47,6 +47,7 @@ function getAnchorAttributes(filePath, linkTitle) {
   const title = linkTitle ? linkTitle : fileName;
   let permalink = `/notes/${slugify(filePath)}`;
   let deadLink = false;
+
   try {
     const startPath = "./src/site/notes/";
     const fullPath = fileName.endsWith(".md")
@@ -54,9 +55,19 @@ function getAnchorAttributes(filePath, linkTitle) {
       : `${startPath}${fileName}.md`;
     const file = fs.readFileSync(fullPath, "utf8");
     const frontMatter = matter(file);
+
     if (frontMatter.data.permalink) {
       permalink = frontMatter.data.permalink;
     }
+
+    let permalinkExists = fs.existsSync(`./dist${permalink}${headerLinkPath}`);
+    let suffix = 1;
+    while (permalinkExists) {
+      permalink = `${frontMatter.data.permalink || `/notes/${slugify(filePath)}`}-${suffix}`;
+      permalinkExists = fs.existsSync(`./dist${permalink}${headerLinkPath}`);
+      suffix++;
+    }
+
     if (
       frontMatter.data.tags &&
       frontMatter.data.tags.indexOf("gardenEntry") != -1
@@ -78,8 +89,9 @@ function getAnchorAttributes(filePath, linkTitle) {
         "target": "",
       },
       innerHTML: title,
-    }
+    };
   }
+
   return {
     attributes: {
       "class": "internal-link",
@@ -88,8 +100,9 @@ function getAnchorAttributes(filePath, linkTitle) {
       "href": `${permalink}${headerLinkPath}`,
     },
     innerHTML: title,
-  }
+  };
 }
+
 
 const tagRegex = /(^|\s|\>)(#[^\s!@#$%^&*()=+\.,\[{\]};:'"?><]+)(?!([^<]*>))/g;
 
@@ -565,11 +578,12 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: "src/site",
       output: "dist",
+      includes: "_includes",
       data: `_data`,
     },
     templateFormats: ["njk", "md", "11ty.js"],
     htmlTemplateEngine: "njk",
-    markdownTemplateEngine: false,
+    markdownTemplateEngine: "njk",  // 마크다운 템플릿 엔진 설정
     passthroughFileCopy: true,
   };
 };
