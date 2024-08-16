@@ -1,3 +1,4 @@
+const path = require("path");
 const slugify = require("@sindresorhus/slugify");
 const markdownIt = require("markdown-it");
 const fs = require("fs");
@@ -7,8 +8,6 @@ const tocPlugin = require("eleventy-plugin-nesting-toc");
 const { parse } = require("node-html-parser");
 const htmlMinifier = require("html-minifier-terser");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const path = require("path");
-const markdownIt = require("markdown-it");
 
 const { headerToId, namedHeadingsFilter } = require("./src/helpers/utils");
 const {
@@ -17,6 +16,7 @@ const {
 } = require("./src/helpers/userSetup");
 
 const Image = require("@11ty/eleventy-img");
+
 function transformImage(src, cls, alt, sizes, widths = ["500", "700", "auto"]) {
   let options = {
     widths: widths,
@@ -35,102 +35,73 @@ function getAnchorLink(filePath, linkTitle) {
   const {attributes, innerHTML} = getAnchorAttributes(filePath, linkTitle);
   return `<a ${Object.keys(attributes).map(key => `${key}="${attributes[key]}"`).join(" ")}>${innerHTML}</a>`;
 }
-module.exports = function(eleventyConfig) {
-  
-  eleventyConfig.addCollection("notes", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("./src/site/notes/**/*.md");
-  });
 
-  eleventyConfig.addFilter("slugify", function(str) {
-    return str.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)+/g, "");
-  });
+function getAnchorAttributes(filePath, linkTitle) {
+  let fileName = filePath.replaceAll("&amp;", "&");
+  let header = "";
+  let headerLinkPath = "";
+  if (filePath.includes("#")) {
+    [fileName, header] = filePath.split("#");
+    headerLinkPath = `#${headerToId(header)}`;
+  }
 
-  eleventyConfig.addFilter("permalink", function(filepath) {
-    const parsedPath = path.parse(filepath);
-    return `/notes/${parsedPath.dir.replace("./src/site/notes", "").toLowerCase()}/${parsedPath.name}/index.html`;
-  });
-
-  function getAnchorAttributes(filePath, linkTitle) {
-    let fileName = filePath.replaceAll("&amp;", "&");
-    let header = "";
-    let headerLinkPath = "";
-    if (filePath.includes("#")) {
-      [fileName, header] = filePath.split("#");
-      headerLinkPath = `#${headerToId(header)}`;
+  let noteIcon = process.env.NOTE_ICON_DEFAULT;
+  const title = linkTitle ? linkTitle : fileName;
+  let permalink = `/notes/${slugify(filePath)}`;
+  let deadLink = false;
+  try {
+    const startPath = "./src/site/notes/";
+    const fullPath = fileName.endsWith(".md")
+      ? `${startPath}${fileName}`
+      : `${startPath}${fileName}.md`;
+    const file = fs.readFileSync(fullPath, "utf8");
+    const frontMatter = matter(file);
+    if (frontMatter.data.permalink) {
+      permalink = frontMatter.data.permalink;
     }
-
-    let noteIcon = process.env.NOTE_ICON_DEFAULT;
-    const title = linkTitle ? linkTitle : fileName;
-    let permalink = `/notes/${slugify(filePath)}`;
-    let deadLink = false;
-    try {
-      const startPath = "./src/site/notes/";
-      const fullPath = fileName.endsWith(".md")
-        ? `${startPath}${fileName}`
-        : `${startPath}${fileName}.md`;
-      const file = fs.readFileSync(fullPath, "utf8");
-      const frontMatter = matter(file);
-      if (frontMatter.data.permalink) {
-        permalink = frontMatter.data.permalink;
-      }
-      const permalinkExists = fs.existsSync(`./dist${permalink}${headerLinkPath}`);
-      if (permalinkExists) {
-        permalink = `/notes/${slugify(filePath)}-${new Date().getTime()}`;
-      }
-      if (
-        frontMatter.data.tags &&
-        frontMatter.data.tags.indexOf("gardenEntry") != -1
-      ) {
-        permalink = "/";
-      }
-      if (frontMatter.data.noteIcon) {
-        noteIcon = frontMatter.data.noteIcon;
-      }
-    } catch {
-      deadLink = true;
+    const permalinkExists = fs.existsSync(`./dist${permalink}${headerLinkPath}`);
+    if (permalinkExists) {
+      permalink = `/notes/${slugify(filePath)}-${new Date().getTime()}`;
     }
-
-    if (deadLink) {
-      return {
-        attributes: {
-          "class": "internal-link is-unresolved",
-          "href": "/404",
-          "target": "",
-        },
-        innerHTML: title,
-      }
+    if (
+      frontMatter.data.tags &&
+      frontMatter.data.tags.indexOf("gardenEntry") != -1
+    ) {
+      permalink = "/";
     }
+    if (frontMatter.data.noteIcon) {
+      noteIcon = frontMatter.data.noteIcon;
+    }
+  } catch {
+    deadLink = true;
+  }
+
+  if (deadLink) {
     return {
       attributes: {
-        "class": "internal-link",
+        "class": "internal-link is-unresolved",
+        "href": "/404",
         "target": "",
-        "data-note-icon": noteIcon,
-        "href": `${permalink}${headerLinkPath}`,
       },
       innerHTML: title,
     }
   }
-
   return {
-    dir: {
-      input: "src/site",
-      output: "dist",
-      includes: "_includes",
-      data: "_data",
+    attributes: {
+      "class": "internal-link",
+      "target": "",
+      "data-note-icon": noteIcon,
+      "href": `${permalink}${headerLinkPath}`,
     },
-    templateFormats: ["njk", "md", "11ty.js"],
-    htmlTemplateEngine: "njk",
-    markdownTemplateEngine: false,
-    passthroughFileCopy: true,
-  };
-};
-
-const tagRegex = /(^|\s|\>)(#[^\s!@#$%^&*()=+\.,\[{\]};:'"?><]+)(?!([^<]*>))/g;
+    innerHTML: title,
+  }
+}
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setLiquidOptions({
     dynamicPartials: true,
   });
+
   let markdownLib = markdownIt({
     breaks: true,
     html: true,
@@ -169,7 +140,6 @@ module.exports = function (eleventyConfig) {
     })
     .use(namedHeadingsFilter)
     .use(function (md) {
-      //https://github.com/DCsunset/markdown-it-mermaid-plugin
       const origFenceRule =
         md.renderer.rules.fence ||
         function (tokens, idx, options, env, self) {
@@ -248,7 +218,6 @@ module.exports = function (eleventyConfig) {
         };
       md.renderer.rules.image = (tokens, idx, options, env, self) => {
         const imageName = tokens[idx].content;
-        //"image.png|metadata?|width"
         const [fileName, ...widthAndMetaData] = imageName.split("|");
         const lastValue = widthAndMetaData[widthAndMetaData.length - 1];
         const lastValueIsNumber = !isNaN(lastValue);
@@ -312,10 +281,6 @@ module.exports = function (eleventyConfig) {
     return (
       str &&
       str.replace(/\[\[(.*?\|.*?)\]\]/g, function (match, p1) {
-        //Check if it is an embedded excalidraw drawing or mathjax javascript
-        if (p1.indexOf("],[") > -1 || p1.indexOf('"$"') > -1) {
-          return match;
-        }
         const [fileLink, linkTitle] = p1.split("|");
 
         return getAnchorLink(fileLink, linkTitle);
@@ -415,14 +380,6 @@ module.exports = function (eleventyConfig) {
           }
         );
 
-        /* Hacky fix for callouts with only a title:
-        This will ensure callout-content isn't produced if
-        the callout only has a title, like this:
-        ```md
-        > [!info] i only have a title
-        ```
-        Not sure why content has a random <p> tag in it,
-        */
         if (content === "\n<p>\n") {
           content = "";
         }
@@ -476,7 +433,6 @@ module.exports = function (eleventyConfig) {
       />`;
     imageTag.innerHTML = html;
   }
-
 
   eleventyConfig.addTransform("picture", function (str) {
     if(process.env.USE_FULL_RESOLUTION_IMAGES === "true"){
@@ -563,7 +519,6 @@ module.exports = function (eleventyConfig) {
     ul: true,
     tags: ["h1", "h2", "h3", "h4", "h5", "h6"],
   });
-
 
   eleventyConfig.addFilter("dateToZulu", function (date) {
     try {
