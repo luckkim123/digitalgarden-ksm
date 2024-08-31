@@ -13,7 +13,7 @@
 
 ## Current Status
 
-- [ ] [[3_Archive/30_Fleeting Notes/3D Reconstruction with Mast3r\|3_Archive/30_Fleeting Notes/3D Reconstruction with Mast3r]]
+- [ ] [[3_Archive/30_Fleeting Notes/3D Reconstruction with Mast3r (작성중)\|3_Archive/30_Fleeting Notes/3D Reconstruction with Mast3r (작성중)]]
 
 
 ## Pending Tasks
