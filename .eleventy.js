@@ -32,8 +32,10 @@ function transformImage(src, cls, alt, sizes, widths = ["500", "700", "auto"]) {
 }
 
 function getAnchorLink(filePath, linkTitle) {
-  const {attributes, innerHTML} = getAnchorAttributes(filePath, linkTitle);
-  return `<a ${Object.keys(attributes).map(key => `${key}="${attributes[key]}"`).join(" ")}>${innerHTML}</a>`;
+  const { attributes, innerHTML } = getAnchorAttributes(filePath, linkTitle);
+  return `<a ${Object.keys(attributes)
+    .map((key) => `${key}="${attributes[key]}"`)
+    .join(" ")}>${innerHTML}</a>`;
 }
 
 function getAnchorAttributes(filePath, linkTitle) {
@@ -59,7 +61,9 @@ function getAnchorAttributes(filePath, linkTitle) {
     if (frontMatter.data.permalink) {
       permalink = frontMatter.data.permalink;
     }
-    const permalinkExists = fs.existsSync(`./dist${permalink}${headerLinkPath}`);
+    const permalinkExists = fs.existsSync(
+      `./dist${permalink}${headerLinkPath}`
+    );
     if (permalinkExists) {
       permalink = `/notes/${slugify(filePath)}-${new Date().getTime()}`;
     }
@@ -79,22 +83,22 @@ function getAnchorAttributes(filePath, linkTitle) {
   if (deadLink) {
     return {
       attributes: {
-        "class": "internal-link is-unresolved",
-        "href": "/404",
-        "target": "",
+        class: "internal-link is-unresolved",
+        href: "/404",
+        target: "",
       },
       innerHTML: title,
-    }
+    };
   }
   return {
     attributes: {
-      "class": "internal-link",
-      "target": "",
+      class: "internal-link",
+      target: "",
       "data-note-icon": noteIcon,
-      "href": `${permalink}${headerLinkPath}`,
+      href: `${permalink}${headerLinkPath}`,
     },
     innerHTML: title,
-  }
+  };
 }
 
 module.exports = function (eleventyConfig) {
@@ -157,17 +161,17 @@ module.exports = function (eleventyConfig) {
         }
         if (token.info.startsWith("ad-")) {
           const code = token.content.trim();
-          const parts = code.split("\n")
+          const parts = code.split("\n");
           let titleLine;
           let collapse;
-          let collapsible = false
-          let collapsed = true
+          let collapsible = false;
+          let collapsed = true;
           let icon;
           let color;
-          let nbLinesToSkip = 0
+          let nbLinesToSkip = 0;
           for (let i = 0; i < 4; i++) {
             if (parts[i] && parts[i].trim()) {
-              let line = parts[i] && parts[i].trim().toLowerCase()
+              let line = parts[i] && parts[i].trim().toLowerCase();
               if (line.startsWith("title:")) {
                 titleLine = line.substring(6);
                 nbLinesToSkip++;
@@ -175,10 +179,10 @@ module.exports = function (eleventyConfig) {
                 icon = line.substring(5);
                 nbLinesToSkip++;
               } else if (line.startsWith("collapse:")) {
-                collapsible = true
+                collapsible = true;
                 collapse = line.substring(9);
-                if (collapse && collapse.trim().toLowerCase() == 'open') {
-                  collapsed = false
+                if (collapse && collapse.trim().toLowerCase() == "open") {
+                  collapsed = false;
                 }
                 nbLinesToSkip++;
               } else if (line.startsWith("color:")) {
@@ -187,24 +191,28 @@ module.exports = function (eleventyConfig) {
               }
             }
           }
-          const foldDiv = collapsible ? `<div class="callout-fold">
+          const foldDiv = collapsible
+            ? `<div class="callout-fold">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-chevron-down">
               <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
-          </div>` : "";
+          </div>`
+            : "";
           const titleDiv = titleLine
             ? `<div class="callout-title"><div class="callout-title-inner">${titleLine}</div>${foldDiv}</div>`
             : "";
-          let collapseClasses = titleLine && collapsible ? 'is-collapsible' : ''
+          let collapseClasses =
+            titleLine && collapsible ? "is-collapsible" : "";
           if (collapsible && collapsed) {
-            collapseClasses += " is-collapsed"
+            collapseClasses += " is-collapsed";
           }
 
-          let res = `<div data-callout-metadata class="callout ${collapseClasses}" data-callout="${token.info.substring(3)
-            }">${titleDiv}\n<div class="callout-content">${md.render(
-              parts.slice(nbLinesToSkip).join("\n")
-            )}</div></div>`;
-          return res
+          let res = `<div data-callout-metadata class="callout ${collapseClasses}" data-callout="${
+            token.info.substring(3)
+          }">${titleDiv}\n<div class="callout-content">${md.render(
+            parts.slice(nbLinesToSkip).join("\n")
+          )}</div></div>`;
+          return res;
         }
 
         // Other languages
@@ -225,7 +233,9 @@ module.exports = function (eleventyConfig) {
 
         let metaData = "";
         if (widthAndMetaData.length > 1) {
-          metaData = widthAndMetaData.slice(0, widthAndMetaData.length - 1).join(" ");
+          metaData = widthAndMetaData
+            .slice(0, widthAndMetaData.length - 1)
+            .join(" ");
         }
 
         if (!lastValueIsNumber) {
@@ -250,7 +260,13 @@ module.exports = function (eleventyConfig) {
         function (tokens, idx, options, env, self) {
           return self.renderToken(tokens, idx, options, env, self);
         };
-      md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
+      md.renderer.rules.link_open = function (
+        tokens,
+        idx,
+        options,
+        env,
+        self
+      ) {
         const aIndex = tokens[idx].attrIndex("target");
         const classIndex = tokens[idx].attrIndex("class");
 
@@ -287,6 +303,9 @@ module.exports = function (eleventyConfig) {
       })
     );
   });
+
+  // Define the tagRegex variable
+  const tagRegex = /(^|\s)(#[a-z\d-]+)/gi;
 
   eleventyConfig.addFilter("taggify", function (str) {
     return (
@@ -325,10 +344,12 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addTransform("dataview-js-links", function (str) {
     const parsed = parse(str);
-    for (const dataViewJsLink of parsed.querySelectorAll("a[data-href].internal-link")) {
+    for (const dataViewJsLink of parsed.querySelectorAll(
+      "a[data-href].internal-link"
+    )) {
       const notePath = dataViewJsLink.getAttribute("data-href");
       const title = dataViewJsLink.innerHTML;
-      const {attributes, innerHTML} = getAnchorAttributes(notePath, title);
+      const { attributes, innerHTML } = getAnchorAttributes(notePath, title);
       for (const key in attributes) {
         dataViewJsLink.setAttribute(key, attributes[key]);
       }
@@ -367,8 +388,8 @@ module.exports = function (eleventyConfig) {
             const titleText = title.replace(/(<\/{0,1}\w+>)/, "")
               ? title
               : `${callout.charAt(0).toUpperCase()}${callout
-                .substring(1)
-                .toLowerCase()}`;
+                  .substring(1)
+                  .toLowerCase()}`;
             const fold = isCollapsable
               ? `<div class="callout-fold"><i icon-name="chevron-down"></i></div>`
               : ``;
@@ -383,14 +404,17 @@ module.exports = function (eleventyConfig) {
         if (content === "\n<p>\n") {
           content = "";
         }
-        let contentDiv = content ? `\n<div class="callout-content">${content}</div>` : "";
+        let contentDiv = content
+          ? `\n<div class="callout-content">${content}</div>`
+          : "";
 
         blockquote.tagName = "div";
         blockquote.classList.add("callout");
         blockquote.classList.add(isCollapsable ? "is-collapsible" : "");
         blockquote.classList.add(isCollapsed ? "is-collapsed" : "");
         blockquote.setAttribute("data-callout", calloutType.toLowerCase());
-        calloutMetaData && blockquote.setAttribute("data-callout-metadata", calloutMetaData);
+        calloutMetaData &&
+          blockquote.setAttribute("data-callout-metadata", calloutMetaData);
         blockquote.innerHTML = `${titleDiv}${contentDiv}`;
       }
     };
@@ -411,19 +435,19 @@ module.exports = function (eleventyConfig) {
       media="(max-width:480px)"
       srcset="${meta.jpeg[0].url}"
       />
-      `
+      `;
     if (meta.webp && meta.webp[1] && meta.webp[1].url) {
       html += `<source
         media="(max-width:1920px)"
         srcset="${meta.webp[1].url}"
         type="image/webp"
-        />`
+        />`;
     }
     if (meta.jpeg && meta.jpeg[1] && meta.jpeg[1].url) {
       html += `<source
         media="(max-width:1920px)"
         srcset="${meta.jpeg[1].url}"
-        />`
+        />`;
     }
     html += `<img
       class="${cls.toString()}"
@@ -435,7 +459,7 @@ module.exports = function (eleventyConfig) {
   }
 
   eleventyConfig.addTransform("picture", function (str) {
-    if(process.env.USE_FULL_RESOLUTION_IMAGES === "true"){
+    if (process.env.USE_FULL_RESOLUTION_IMAGES === "true") {
       return str;
     }
     const parsed = parse(str);
@@ -444,7 +468,7 @@ module.exports = function (eleventyConfig) {
       if (src && src.startsWith("/") && !src.endsWith(".svg")) {
         const cls = imageTag.classList.value;
         const alt = imageTag.getAttribute("alt");
-        const width = imageTag.getAttribute("width") || '';
+        const width = imageTag.getAttribute("width") || "";
 
         try {
           const meta = transformImage(
@@ -493,7 +517,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addTransform("htmlMinifier", (content, outputPath) => {
     if (
-      (process.env.NODE_ENV === "production" || process.env.ELEVENTY_ENV === "prod") &&
+      (process.env.NODE_ENV === "production" ||
+        process.env.ELEVENTY_ENV === "prod") &&
       outputPath &&
       outputPath.endsWith(".html")
     ) {
@@ -527,7 +552,7 @@ module.exports = function (eleventyConfig) {
       return "";
     }
   });
-  
+
   eleventyConfig.addFilter("jsonify", function (variable) {
     return JSON.stringify(variable) || '""';
   });
@@ -559,7 +584,7 @@ module.exports = function (eleventyConfig) {
     },
     templateFormats: ["njk", "md", "11ty.js"],
     htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk",  // 마크다운 템플릿 엔진 설정
+    markdownTemplateEngine: "njk", // 마크다운 템플릿 엔진 설정
     passthroughFileCopy: true,
   };
 };
