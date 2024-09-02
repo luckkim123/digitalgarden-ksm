@@ -1,19 +1,7 @@
 ---
-date: 2024-07-09, 17:11
-status: Permanent
-tags:
-  - Study/Coding/VSCode
-aliases: 
-keywords:
-  - launch.json
-  - settings.json
-  - vscode
-related notes: 
-reference: 
-author: 
-url: 
-dg-publish: true
+{"dg-publish":true,"permalink":"/1-area/11-study/111-coding/et-cs/vs-code/","tags":["Study/Coding/VSCode"],"noteIcon":"","created":"2024-07-09"}
 ---
+
 - 실행하고자 하는 코드가 있는 프로젝트 폴더에 `launch.json` 파일 생성
 ```json title:launch.json
 {

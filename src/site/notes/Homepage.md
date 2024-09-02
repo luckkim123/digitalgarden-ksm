@@ -21,6 +21,7 @@
 # Recently update
 | File                                                                                                                                                                            | 작성일         | 수정시각                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------- |
+| [[1_Area/11_Study/111_Coding/ETCs/VSCode 가상환경 코드 디버깅 수행\|VSCode 가상환경 코드 디버깅 수행]]                                                                                             | 24년 07월 09일 | 24년 09월 02일 : 03시 06분 |
 | [[0_Project/00_Research Internship/002_VideoRay/울진 해양 과학관 - VideoRay supporter 제작\|울진 해양 과학관 - VideoRay supporter 제작]]                                                       | 24년 08월 25일 | 24년 09월 02일 : 02시 59분 |
 | [[0_Project/00_Research Internship/002_VideoRay/Kanban - VideoRay\|Kanban - VideoRay]]                                                                                       | 24년 09월 02일 | 24년 09월 02일 : 02시 46분 |
 | [[0_Project/00_Research Internship/001_3D Reconstruction/Ablation Study for 3D Reconstruction\|Ablation Study for 3D Reconstruction]]                                        | 24년 07월 14일 | 24년 09월 02일 : 12시 17분 |
