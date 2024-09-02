@@ -1,18 +1,7 @@
 ---
-date: 2024-08-26
-status: Problem Solving
-tags:
-  - Study/Coding/solution
-aliases: 
-keywords:
-  - libucc.so.1
-  - ucs_mpool_params_reset
-related notes: 
-reference: 
-author: 
-url: 
-dg-publish: true
+{"dg-publish":true,"permalink":"/1-area/11-study/111-coding/error-fix/import-error-libucc-so-1-undefined-symbol-ucs-mpool-params-reset/","tags":["Study/Coding/solution"],"noteIcon":"","created":"2024-08-26"}
 ---
+
 # 문제 발생
 
 - `{python}import torch` 과정에서 에러 발생

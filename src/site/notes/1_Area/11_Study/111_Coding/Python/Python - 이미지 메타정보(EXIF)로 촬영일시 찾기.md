@@ -1,18 +1,7 @@
 ---
-date: 2024-07-09, 02:25
-status: Permanent
-tags:
-  - Study/Camera
-aliases:
-  - 시간 동기화
-  - TimeSync
-keywords: 
-related notes: 
-reference: 
-author: 
-url: 
-dg-publish: true
+{"dg-publish":true,"permalink":"/1-area/11-study/111-coding/python/python-exif/","tags":["Study/Camera"],"noteIcon":"","created":"2024-07-09"}
 ---
+
 # EXIF (EXchangeble Image file Format)
 - 휴대폰 및 카메라로 촬영한 이미지에는 EXIF 라고 하는 메타정보가 있으며, 이미지 이름, 크기, 촬영일시, 카메라 정보, GPS, 노출 정보 등 다양한 정보가 있음
 - Python 에서는 PIL 패키지를 사용하여 EXIF 를 읽을 수 있음

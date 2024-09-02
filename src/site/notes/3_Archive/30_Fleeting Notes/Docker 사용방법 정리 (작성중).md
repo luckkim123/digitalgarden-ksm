@@ -1,14 +1,7 @@
 ---
-date: 2024-08-13
-status: Fleeting
-tags: 
-aliases: 
-keywords: 
-reference: 
-author: 
-url: 
-dg-publish: true
+{"dg-publish":true,"permalink":"/3-archive/30-fleeting-notes/docker/","noteIcon":"","created":"2024-08-13"}
 ---
+
 # Docker란?
 - 어쩌구 저쩌구
 
