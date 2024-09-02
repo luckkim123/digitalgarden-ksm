@@ -2,7 +2,6 @@
 {"dg-publish":true,"permalink":"/homepage/","tags":["gardenEntry"],"noteIcon":""}
 ---
 
-
 # Projects
 >[!multi-column]
 >>##### In progress
