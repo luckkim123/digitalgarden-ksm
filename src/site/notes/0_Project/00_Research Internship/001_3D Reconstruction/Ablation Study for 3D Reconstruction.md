@@ -202,7 +202,7 @@ Translation Matrix:
 [[1_Area/11_Study/111_Coding/OpenCV/stereoSGBM_create\|Stereo SGBM]]
 
 
-[[3_Archive/32_Daily Notes/2024-07-11\|2024-07-11]]
+[[3_Archive/32_Calendar/Daily Notes/2024-07-11\|2024-07-11]]
 # Resource
 ---
 

@@ -1,7 +1,15 @@
 ---
-{"dg-publish":true,"permalink":"/1-area/11-study/111-coding/python/functools/","noteIcon":"","created":"2024-08-19"}
+date: 2024-08-19
+status: Permanent
+tags: 
+aliases: 
+keywords: 
+related notes: 
+reference: 
+author: 
+url: 
+dg-publish: true
 ---
-
 # functools 란?
 
 - Python 표준 라이브러리의 일부로, 함수형 프로그래밍을 지원하는 유용한 도구들을 제공하는 모듈
