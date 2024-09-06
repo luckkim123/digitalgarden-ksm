@@ -13,7 +13,7 @@
 #### Key Objectives
 - 이미지의 촬영 시간을 기준으로 좌우 카메라 데이터를 시간 동기화 한 뒤, 별도 폴더에 저장
 
-![3_Archive/31_Attachments/G0034391.jpg|500](/img/user/3_Archive/31_Attachments/G0034391.jpg)
+![3_Archive/1_Attachments/G0034391.jpg|500](/img/user/3_Archive/1_Attachments/G0034391.jpg)
 
 ---
 # Progress
@@ -25,10 +25,10 @@
 ##### Solutions
 - 좌우 고프로에 촬영된 휴대폰 타이머를 참고하여 각 프레임의 촬영 시간을 계산한 뒤 시간 동기화 수행
 
-![3_Archive/31_Attachments/Screenshot from 2024-07-01 13-42-45.png](/img/user/3_Archive/31_Attachments/Screenshot%20from%202024-07-01%2013-42-45.png)
+![3_Archive/1_Attachments/Screenshot from 2024-07-01 13-42-45.png](/img/user/3_Archive/1_Attachments/Screenshot%20from%202024-07-01%2013-42-45.png)
 
 ---
 # Resource
 
-- [[1_Area/11_Study/111_Coding/Python/Python - 이미지 메타정보(EXIF)로 촬영일시 찾기\|Python - 이미지 메타정보(EXIF)로 촬영일시 찾기]]
+- [[2_Resource/1_Study/1_Coding/Python/Python - 이미지 메타정보(EXIF)로 촬영일시 찾기\|Python - 이미지 메타정보(EXIF)로 촬영일시 찾기]]
 

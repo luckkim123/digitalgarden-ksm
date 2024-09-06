@@ -18,7 +18,7 @@
 ### Key Objectives
 1. Baseline 10cm, 20cm에서 [[0_Project/00_Research Internship/001_3D Reconstruction/Stereo Calibration\|Stereo Calibration]]수행
 2. 1m, 2m, 3m 거리의 물체를 촬영하고, [[0_Project/00_Research Internship/001_3D Reconstruction/3D Reconstruction from Stereo Images\|3D Reconstruction from Stereo Images]]을 수행하여 결과 비교
-3. [[1_Area/11_Study/111_Coding/OpenCV/stereoSGBM_create\|cv2.stereoSGBM_create]]의 파라미터를 수정하여 최적의 값 찾기
+3. [[2_Resource/1_Study/1_Coding/OpenCV/stereoSGBM_create\|cv2.stereoSGBM_create]]의 파라미터를 수정하여 최적의 값 찾기
 
 <br/><br/>
 
@@ -59,49 +59,49 @@ Translation Matrix:
 ### Results of 3D Reconstruction
 
 - 1m
-![3_Archive/31_Attachments/000000.JPG_imgL.jpg|+grid](/img/user/3_Archive/31_Attachments/000000.JPG_imgL.jpg)![3_Archive/31_Attachments/000000.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/31_Attachments/000000.JPG_imgL_undist.jpg)
+![3_Archive/1_Attachments/000000.JPG_imgL.jpg|+grid](/img/user/3_Archive/1_Attachments/000000.JPG_imgL.jpg)![3_Archive/1_Attachments/000000.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/1_Attachments/000000.JPG_imgL_undist.jpg)
 <center style="font-size: 12; opacity: 0.7">Original / Undistorted</center><br/>
 
-![3_Archive/31_Attachments/000000.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/31_Attachments/000000.JPG_imgL_rect.jpg)![3_Archive/31_Attachments/000000.JPG_disparity.jpg|+grid](/img/user/3_Archive/31_Attachments/000000.JPG_disparity.jpg)
+![3_Archive/1_Attachments/000000.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/1_Attachments/000000.JPG_imgL_rect.jpg)![3_Archive/1_Attachments/000000.JPG_disparity.jpg|+grid](/img/user/3_Archive/1_Attachments/000000.JPG_disparity.jpg)
 <center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center><br/>
 
 
-![3_Archive/31_Attachments/제목 없는 동영상.gif](/img/user/3_Archive/31_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81.gif)
+![3_Archive/1_Attachments/제목 없는 동영상.gif](/img/user/3_Archive/1_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81.gif)
 
 <br/>
 
 - 2m
 
-![3_Archive/31_Attachments/000001.JPG_imgL.jpg|+grid](/img/user/3_Archive/31_Attachments/000001.JPG_imgL.jpg)![3_Archive/31_Attachments/000001.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/31_Attachments/000001.JPG_imgL_undist.jpg)
+![3_Archive/1_Attachments/000001.JPG_imgL.jpg|+grid](/img/user/3_Archive/1_Attachments/000001.JPG_imgL.jpg)![3_Archive/1_Attachments/000001.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/1_Attachments/000001.JPG_imgL_undist.jpg)
 <center style="font-size: 12; opacity: 0.7">Original / Undistorted</center><br/>
 
-![3_Archive/31_Attachments/000001.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/31_Attachments/000001.JPG_imgL_rect.jpg)![3_Archive/31_Attachments/000001.JPG_disparity.jpg|+grid](/img/user/3_Archive/31_Attachments/000001.JPG_disparity.jpg)
+![3_Archive/1_Attachments/000001.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/1_Attachments/000001.JPG_imgL_rect.jpg)![3_Archive/1_Attachments/000001.JPG_disparity.jpg|+grid](/img/user/3_Archive/1_Attachments/000001.JPG_disparity.jpg)
 <center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center><br/>
 
-![3_Archive/31_Attachments/제목 없는 동영상 (1).gif](/img/user/3_Archive/31_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(1).gif)
+![3_Archive/1_Attachments/제목 없는 동영상 (1).gif](/img/user/3_Archive/1_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(1).gif)
 <br/>
 
 - 3m
 
-![3_Archive/31_Attachments/000002.JPG_imgL.jpg|+grid](/img/user/3_Archive/31_Attachments/000002.JPG_imgL.jpg)![3_Archive/31_Attachments/000002.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/31_Attachments/000002.JPG_imgL_undist.jpg)
+![3_Archive/1_Attachments/000002.JPG_imgL.jpg|+grid](/img/user/3_Archive/1_Attachments/000002.JPG_imgL.jpg)![3_Archive/1_Attachments/000002.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/1_Attachments/000002.JPG_imgL_undist.jpg)
 <center style="font-size: 12; opacity: 0.7">Original / Undistorted</center><br/>
 
-![3_Archive/31_Attachments/000002.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/31_Attachments/000002.JPG_imgL_rect.jpg)![3_Archive/31_Attachments/000002.JPG_disparity.jpg|+grid](/img/user/3_Archive/31_Attachments/000002.JPG_disparity.jpg)
+![3_Archive/1_Attachments/000002.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/1_Attachments/000002.JPG_imgL_rect.jpg)![3_Archive/1_Attachments/000002.JPG_disparity.jpg|+grid](/img/user/3_Archive/1_Attachments/000002.JPG_disparity.jpg)
 <center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center><br/>
 
-![3_Archive/31_Attachments/제목 없는 동영상 (2).gif](/img/user/3_Archive/31_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(2).gif)
+![3_Archive/1_Attachments/제목 없는 동영상 (2).gif](/img/user/3_Archive/1_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(2).gif)
 
 <br/>
 
 - 3m - undistortion 과정 제외
 
-![3_Archive/31_Attachments/000002_2.JPG_imgL.jpg|+grid](/img/user/3_Archive/31_Attachments/000002_2.JPG_imgL.jpg)![3_Archive/31_Attachments/000002_2.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/31_Attachments/000002_2.JPG_imgL_undist.jpg)
+![3_Archive/1_Attachments/000002_2.JPG_imgL.jpg|+grid](/img/user/3_Archive/1_Attachments/000002_2.JPG_imgL.jpg)![3_Archive/1_Attachments/000002_2.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/1_Attachments/000002_2.JPG_imgL_undist.jpg)
 <center style="font-size: 12; opacity: 0.7">Original / Undistorted</center><br/>
 
-![3_Archive/31_Attachments/000002_2.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/31_Attachments/000002_2.JPG_imgL_rect.jpg)![3_Archive/31_Attachments/000002_2.JPG_disparity.jpg|+grid](/img/user/3_Archive/31_Attachments/000002_2.JPG_disparity.jpg)
+![3_Archive/1_Attachments/000002_2.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/1_Attachments/000002_2.JPG_imgL_rect.jpg)![3_Archive/1_Attachments/000002_2.JPG_disparity.jpg|+grid](/img/user/3_Archive/1_Attachments/000002_2.JPG_disparity.jpg)
 <center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center><br/>
 
-![3_Archive/31_Attachments/제목 없는 동영상 1.gif](/img/user/3_Archive/31_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%201.gif)
+![3_Archive/1_Attachments/제목 없는 동영상 1.gif](/img/user/3_Archive/1_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%201.gif)
 
 <br/><br/>
 
@@ -141,39 +141,39 @@ Translation Matrix:
 
 - 1m
 
-![3_Archive/31_Attachments/000003.JPG_imgL.jpg|+grid](/img/user/3_Archive/31_Attachments/000003.JPG_imgL.jpg)![3_Archive/31_Attachments/000003.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/31_Attachments/000003.JPG_imgL_undist.jpg)
+![3_Archive/1_Attachments/000003.JPG_imgL.jpg|+grid](/img/user/3_Archive/1_Attachments/000003.JPG_imgL.jpg)![3_Archive/1_Attachments/000003.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/1_Attachments/000003.JPG_imgL_undist.jpg)
 <center style="font-size: 12; opacity: 0.7">Original / Undistorted</center>
 <br/>
 
-![3_Archive/31_Attachments/000003.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/31_Attachments/000003.JPG_imgL_rect.jpg)![3_Archive/31_Attachments/000003.JPG_disparity.jpg|+grid](/img/user/3_Archive/31_Attachments/000003.JPG_disparity.jpg)
+![3_Archive/1_Attachments/000003.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/1_Attachments/000003.JPG_imgL_rect.jpg)![3_Archive/1_Attachments/000003.JPG_disparity.jpg|+grid](/img/user/3_Archive/1_Attachments/000003.JPG_disparity.jpg)
 <center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center><br/>
 
 
-![3_Archive/31_Attachments/제목 없는 동영상 (1) 1.gif](/img/user/3_Archive/31_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(1)%201.gif)
+![3_Archive/1_Attachments/제목 없는 동영상 (1) 1.gif](/img/user/3_Archive/1_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(1)%201.gif)
 
 <br/>
 
 - 2m
 
-![3_Archive/31_Attachments/000004.JPG_imgL.jpg|+grid](/img/user/3_Archive/31_Attachments/000004.JPG_imgL.jpg)![3_Archive/31_Attachments/000004.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/31_Attachments/000004.JPG_imgL_undist.jpg)
+![3_Archive/1_Attachments/000004.JPG_imgL.jpg|+grid](/img/user/3_Archive/1_Attachments/000004.JPG_imgL.jpg)![3_Archive/1_Attachments/000004.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/1_Attachments/000004.JPG_imgL_undist.jpg)
 <center style="font-size: 12; opacity: 0.7">Original / Undistorted</center><br/>
 
-![3_Archive/31_Attachments/000004.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/31_Attachments/000004.JPG_imgL_rect.jpg)![3_Archive/31_Attachments/000004.JPG_disparity.jpg|+grid](/img/user/3_Archive/31_Attachments/000004.JPG_disparity.jpg)
+![3_Archive/1_Attachments/000004.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/1_Attachments/000004.JPG_imgL_rect.jpg)![3_Archive/1_Attachments/000004.JPG_disparity.jpg|+grid](/img/user/3_Archive/1_Attachments/000004.JPG_disparity.jpg)
 <center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center><br/>
 
-![3_Archive/31_Attachments/제목 없는 동영상 (2) 1.gif](/img/user/3_Archive/31_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(2)%201.gif)
+![3_Archive/1_Attachments/제목 없는 동영상 (2) 1.gif](/img/user/3_Archive/1_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(2)%201.gif)
 
 <br/>
 
 - 3m
-![3_Archive/31_Attachments/000005.JPG_imgL.jpg|+grid](/img/user/3_Archive/31_Attachments/000005.JPG_imgL.jpg)![3_Archive/31_Attachments/000005.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/31_Attachments/000005.JPG_imgL_undist.jpg)
+![3_Archive/1_Attachments/000005.JPG_imgL.jpg|+grid](/img/user/3_Archive/1_Attachments/000005.JPG_imgL.jpg)![3_Archive/1_Attachments/000005.JPG_imgL_undist.jpg|+grid](/img/user/3_Archive/1_Attachments/000005.JPG_imgL_undist.jpg)
 <center style="font-size: 12; opacity: 0.7">Original / Undistorted</center><br/>
 
-![3_Archive/31_Attachments/000005.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/31_Attachments/000005.JPG_imgL_rect.jpg)![3_Archive/31_Attachments/000005.JPG_disparity.jpg|+grid](/img/user/3_Archive/31_Attachments/000005.JPG_disparity.jpg)
+![3_Archive/1_Attachments/000005.JPG_imgL_rect.jpg|+grid](/img/user/3_Archive/1_Attachments/000005.JPG_imgL_rect.jpg)![3_Archive/1_Attachments/000005.JPG_disparity.jpg|+grid](/img/user/3_Archive/1_Attachments/000005.JPG_disparity.jpg)
 <center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center><br/>
 
 
-![3_Archive/31_Attachments/제목 없는 동영상 (3).gif](/img/user/3_Archive/31_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(3).gif)
+![3_Archive/1_Attachments/제목 없는 동영상 (3).gif](/img/user/3_Archive/1_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(3).gif)
 
 <br/><br/>
 
@@ -183,13 +183,13 @@ Translation Matrix:
 	- 3m 부터는 물체에 한해선 포착을 하지만, 빛이 조금이라도 강하던가 흰 색의 경우 거리를 제대로 계산하지 못함
 		- 위 문제를 명확하게 하기 위해 한쪽 조명을 끄고 동일한 조건(3m)하에 진행해보았으나, 사진이 어두워 픽셀 간 차이가 적어서 그런지 거리를 거의 계산하지 못함
 
-![3_Archive/31_Attachments/000005.JPG_imgL 1.jpg|+grid](/img/user/3_Archive/31_Attachments/000005.JPG_imgL%201.jpg)![3_Archive/31_Attachments/000005.JPG_imgL_undist 1.jpg|+grid](/img/user/3_Archive/31_Attachments/000005.JPG_imgL_undist%201.jpg)
+![3_Archive/1_Attachments/000005.JPG_imgL 1.jpg|+grid](/img/user/3_Archive/1_Attachments/000005.JPG_imgL%201.jpg)![3_Archive/1_Attachments/000005.JPG_imgL_undist 1.jpg|+grid](/img/user/3_Archive/1_Attachments/000005.JPG_imgL_undist%201.jpg)
 <center style="font-size: 12; opacity: 0.7">Original / Undistorted</center><br/>
 
-![3_Archive/31_Attachments/000005.JPG_imgL_rect 1.jpg|+grid](/img/user/3_Archive/31_Attachments/000005.JPG_imgL_rect%201.jpg)![3_Archive/31_Attachments/000005.JPG_disparity 1.jpg|+grid](/img/user/3_Archive/31_Attachments/000005.JPG_disparity%201.jpg)
+![3_Archive/1_Attachments/000005.JPG_imgL_rect 1.jpg|+grid](/img/user/3_Archive/1_Attachments/000005.JPG_imgL_rect%201.jpg)![3_Archive/1_Attachments/000005.JPG_disparity 1.jpg|+grid](/img/user/3_Archive/1_Attachments/000005.JPG_disparity%201.jpg)
 <center style="font-size: 12; opacity: 0.7">Recrified / Disparity map</center><br/>
 
-![3_Archive/31_Attachments/제목 없는 동영상 (4).gif](/img/user/3_Archive/31_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(4).gif)
+![3_Archive/1_Attachments/제목 없는 동영상 (4).gif](/img/user/3_Archive/1_Attachments/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%8F%99%EC%98%81%EC%83%81%20(4).gif)
 
 <br/>
 
@@ -199,10 +199,10 @@ Translation Matrix:
 <br/><br/>
 
 ## cv2.StreoSGBM_create
-[[1_Area/11_Study/111_Coding/OpenCV/stereoSGBM_create\|Stereo SGBM]]
+[[2_Resource/1_Study/1_Coding/OpenCV/stereoSGBM_create\|Stereo SGBM]]
 
 
-[[3_Archive/32_Calendar/Daily Notes/2024-07-11\|2024-07-11]]
+[[3_Archive/2_Calendar/Daily Notes/2024-07-11\|2024-07-11]]
 # Resource
 ---
 

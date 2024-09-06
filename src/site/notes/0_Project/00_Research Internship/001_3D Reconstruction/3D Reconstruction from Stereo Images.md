@@ -59,7 +59,7 @@ def undistort(frame, K, dist):
 | **0.0332** | **-0.1465** | **0.0020** | **-0.0003** | **0.1641** |
 <center style="font-size: 12; opacity: 0.7">Matlab 에서 구한 Dist coeff (위) / OpenCV 에서 구한 Dist coeff (밑)</center>
 
-![3_Archive/31_Attachments/Pasted image 20240709195741.png|+grid](/img/user/3_Archive/31_Attachments/Pasted%20image%2020240709195741.png)![3_Archive/31_Attachments/Pasted image 20240709195756.png|+grid](/img/user/3_Archive/31_Attachments/Pasted%20image%2020240709195756.png)
+![3_Archive/1_Attachments/Pasted image 20240709195741.png|+grid](/img/user/3_Archive/1_Attachments/Pasted%20image%2020240709195741.png)![3_Archive/1_Attachments/Pasted image 20240709195756.png|+grid](/img/user/3_Archive/1_Attachments/Pasted%20image%2020240709195756.png)
 <center style="font-size: 12; opacity: 0.7">Matlab 에서 구한 Dist coeff (좌) / OpenCV 에서 구한 Dist coeff (우)</center>
 
 <br/><br/>
@@ -86,7 +86,7 @@ def rectify(imgL_undist, imgR_undist, K1, dist1, K2, dist2, R, T):
 - `cv2.initUndistortRectifyMap`: 왜곡 및 정렬 맵을 계산.
 - `cv2.remap`: 왜곡 및 정렬된 이미지를 생성.
 
-![3_Archive/31_Attachments/Pasted image 20240709203045.png|+grid](/img/user/3_Archive/31_Attachments/Pasted%20image%2020240709203045.png)![3_Archive/31_Attachments/Pasted image 20240709203105.png|+grid](/img/user/3_Archive/31_Attachments/Pasted%20image%2020240709203105.png)
+![3_Archive/1_Attachments/Pasted image 20240709203045.png|+grid](/img/user/3_Archive/1_Attachments/Pasted%20image%2020240709203045.png)![3_Archive/1_Attachments/Pasted image 20240709203105.png|+grid](/img/user/3_Archive/1_Attachments/Pasted%20image%2020240709203105.png)
 <center style="font-size: 12; opacity: 0.7">Matlab 에서 구한 Dist coeff (좌) / OpenCV 에서 구한 Dist coeff (우)</center>
 
 <br/>
@@ -112,12 +112,12 @@ def matching(imgL_rect, imgR_rect):
     return disp
 ```
 
-- `cv2.StereoSGBM_create`: 스테레오 매칭 알고리즘([[1_Area/11_Study/111_Coding/OpenCV/stereoSGBM_create\|Stereo SGBM]]) 생성. 
+- `cv2.StereoSGBM_create`: 스테레오 매칭 알고리즘([[2_Resource/1_Study/1_Coding/OpenCV/stereoSGBM_create\|Stereo SGBM]]) 생성. 
 - `cv2.ximgproc.createRightMatcher`: 오른쪽 매칭 생성.
 - `cv2.ximgproc.createDisparityWLSFilter`: 좌우 디스패리티를 조화롭게 필터링.
 - `cv2.normalize`: 결과 디스패리티 맵을 정규화.
 
-![3_Archive/31_Attachments/Pasted image 20240709203224.png|+grid](/img/user/3_Archive/31_Attachments/Pasted%20image%2020240709203224.png)![3_Archive/31_Attachments/Pasted image 20240709203232.png|+grid](/img/user/3_Archive/31_Attachments/Pasted%20image%2020240709203232.png)
+![3_Archive/1_Attachments/Pasted image 20240709203224.png|+grid](/img/user/3_Archive/1_Attachments/Pasted%20image%2020240709203224.png)![3_Archive/1_Attachments/Pasted image 20240709203232.png|+grid](/img/user/3_Archive/1_Attachments/Pasted%20image%2020240709203232.png)
 <center style="font-size: 12; opacity: 0.7">Matlab 에서 구한 Dist coeff (좌) / OpenCV 에서 구한 Dist coeff (우)</center>
 <br/>
 
@@ -153,7 +153,7 @@ def extract(imgL, disp, K1, K2, T, PLY_SAVE):
 ### Issues - Q matrix
 - OpenCV 에서는 Reconstruction 을 하기 위해 `cv2.reprojectImageTo3D` 함수를 사용하며, `disparity map` 과 `Q` 행렬이 인자로 들어감
 - 이때, `Q` 행렬은 `cv2.stereoRectify` 함수에서 계산되는데 계산 식은 다음과 같음
-  ![3_Archive/31_Attachments/Pasted image 20240705171519.png](/img/user/3_Archive/31_Attachments/Pasted%20image%2020240705171519.png)
+  ![3_Archive/1_Attachments/Pasted image 20240705171519.png](/img/user/3_Archive/1_Attachments/Pasted%20image%2020240705171519.png)
 - 하지만 `cv2.stereoRectify` 에서 구해진 결과 값과 수동으로 계산한 값이 차이가 있음
 
 |  1  |  0  |    0    | -2776.3 |
@@ -168,10 +168,10 @@ def extract(imgL, disp, K1, K2, T, PLY_SAVE):
 |  0  |  0  | -0.0405 | **0**   |
 <center style="font-size: 12; opacity: 0.7">cv2.stereoRectify 에서 구한 Q matrix (위) / 수동으로 구한 Q matrix (밑)</center>
 
-![[3_Archive/31_Attachments/test3-3-2024-07-05_15.24.54.mp4]]
+![[3_Archive/1_Attachments/test3-3-2024-07-05_15.24.54.mp4]]
 <center style="font-size: 12; opacity: 0.7">cv2.stereoRectify 에서 구한 Q matrix 의 Reconstruction 결과 값</center>
 
-![[3_Archive/31_Attachments/test3-4-2024-07-05_15.37.11.mp4]]
+![[3_Archive/1_Attachments/test3-4-2024-07-05_15.37.11.mp4]]
 <center style="font-size: 12; opacity: 0.7">수동으로 구한 Q matrix 의 Reconstruction 결과 값</center>
 
 # Resource

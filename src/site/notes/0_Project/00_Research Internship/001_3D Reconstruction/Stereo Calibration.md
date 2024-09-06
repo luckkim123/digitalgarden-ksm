@@ -30,8 +30,8 @@
 	```
 
 	- 참고 자료
-		- [[1_Area/11_Study/111_Coding/ETCs/VSCode 가상환경 코드 디버깅 수행\|VSCode 가상환경 코드 디버깅 수행]]
-		- [[1_Area/11_Study/111_Coding/ErrorFix/Open3D WARNING - GLFW Error\|Open3D WARNING - GLFW Error]]
+		- [[2_Resource/1_Study/1_Coding/ETCs/VSCode 가상환경 코드 디버깅 수행\|VSCode 가상환경 코드 디버깅 수행]]
+		- [[2_Resource/1_Study/1_Coding/ErrorFix/Open3D WARNING - GLFW Error\|Open3D WARNING - GLFW Error]]
 
 
 ## Stereo Calibration
@@ -71,7 +71,7 @@
 		- **rvecs**: 회전은 3×1 벡터로 지정. 벡터의 방향은 회전 축을 지정하고 벡터의 크기는 회전 각을 지정
 		- **tvecs**: 3×1 이동 벡터
 
-	![3_Archive/31_Attachments/Pasted image 20240709175326.png](/img/user/3_Archive/31_Attachments/Pasted%20image%2020240709175326.png)
+	![3_Archive/1_Attachments/Pasted image 20240709175326.png](/img/user/3_Archive/1_Attachments/Pasted%20image%2020240709175326.png)
 	$\text{Distortion coefficients} = (k_1 k_2 p_1 p_2 k_3)$
 
 
@@ -115,7 +115,7 @@
 | **0.0332** | **-0.1465** | **0.0020** | **-0.0003** | **0.1641** |
 <center style="font-size: 12; opacity: 0.7">Matlab 에서 구한 Dist coeff (위) / OpenCV 에서 구한 Dist coeff (밑)</center>
 
-![3_Archive/31_Attachments/Pasted image 20240709195741.png|+grid](/img/user/3_Archive/31_Attachments/Pasted%20image%2020240709195741.png)![3_Archive/31_Attachments/Pasted image 20240709195756.png|+grid](/img/user/3_Archive/31_Attachments/Pasted%20image%2020240709195756.png)
+![3_Archive/1_Attachments/Pasted image 20240709195741.png|+grid](/img/user/3_Archive/1_Attachments/Pasted%20image%2020240709195741.png)![3_Archive/1_Attachments/Pasted image 20240709195756.png|+grid](/img/user/3_Archive/1_Attachments/Pasted%20image%2020240709195756.png)
 <center style="font-size: 12; opacity: 0.7">Matlab 에서 구한 Dist coeff (좌) / OpenCV 에서 구한 Dist coeff (우)</center>
 
 <br/><br/>
