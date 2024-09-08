@@ -27,7 +27,7 @@
 $$\begin{aligned}
 z:b&=z-f:b-x_l+x_r\\\\
 b\cdot z-b\cdot f&=b\cdot z-(x_r-x_l)\cdot z\\\\
-z&=\frac{b\cdot f}{z_r-z_l}=\frac{b\cdot f}{d}
+z&=\frac{b\cdot f}{x_r-x_l}=\frac{b\cdot f}{d}
 \end{aligned}$$
 
 
