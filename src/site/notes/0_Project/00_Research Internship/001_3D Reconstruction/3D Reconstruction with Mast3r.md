@@ -1,20 +1,7 @@
 ---
-date: 2024-08-31
-status: Project
-tags:
-  - Project
-  - Project/Stereo2PCD
-aliases: 
-keywords:
-  - MASt3R
-  - DUSt3R
-  - 3D Reconstruction
-related notes: 
-reference: 
-author: 
-url: 
-dg-publish: true
+{"dg-publish":true,"permalink":"/0-project/00-research-internship/001-3-d-reconstruction/3-d-reconstruction-with-mast3r/","tags":["Project","Project/Stereo2PCD"],"noteIcon":"","created":"2024-08-31"}
 ---
+
 >[!summary] Contents
 >
 > - [Overview](#Overview)
