@@ -1,7 +1,17 @@
 ---
-{"dg-publish":true,"permalink":"/3-archive/et-cs/post-project/video-ray/video-ray-supporter/","tags":["Project"],"noteIcon":"","created":"2024-07-09"}
----
+date: 2024-07-09
+status: Project
+tags:
+  - Project
+aliases: 
+keywords: 
+related notes: 
+reference: 
+author: 
+url: 
+dg-publish: true
 
+---
 # Overview
 ---
 ### Background

@@ -1,7 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/3-archive/et-cs/post-project/video-ray/kanban-video-ray/","noteIcon":"","created":"2024-07-22"}
----
 
+kanban-plugin: board
+date: 2024-07-22
+dg-publish: true
+status: Project
+
+---
 
 ## Completed Tasks
 
