@@ -1,19 +1,7 @@
 ---
-date: 2024-08-04
-status: Permanent
-tags:
-  - Study/Camera/3D-Reconstruction
-  - Project/Stereo2PCD
-aliases: 
-keywords:
-  - 3D Reconstruction
-  - 시차 맵
-reference:
-  - "[[2_Resource/1_Study/1_Coding/OpenCV/stereoSGBM_create\|stereoSGBM_create]]"
-author: 
-url: 
-dg-publish: true
+{"dg-publish":true,"permalink":"/2-resource/1-study/5-sensors/stereo-camera/stereo-camera-depth-estimation/","tags":["Study/Camera/3D-Reconstruction","Project/Stereo2PCD"],"noteIcon":"","created":"2024-08-04"}
 ---
+
 # Stereo Vision
 
 - 사람의 시각 시스템을 모방한 기술
