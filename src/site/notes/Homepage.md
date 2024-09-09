@@ -5,7 +5,7 @@
 # Projects
 >[!multi-column]
 >>[!note] #### In progress
->>- [ ] [[2_Resource/1_Study/ETCs/Ansys/Fluid Solid Interaction Analysis (FSI)\|2-Way Fluid Solid Interaction Analysis (FSI)]]
+>>- [ ] [[0_Project/UT - FSI Analysis/Fluid Solid Interaction Analysis (FSI) in Ansys\|Fluid Solid Interaction Analysis (FSI) in Ansys]]
 >
 >>[!abstract] ##### On going
 >

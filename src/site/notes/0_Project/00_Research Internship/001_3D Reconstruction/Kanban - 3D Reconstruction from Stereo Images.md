@@ -1,9 +1,7 @@
 ---
-
-kanban-plugin: board
-dg-publish: true
-
+{"dg-publish":true,"permalink":"/0-project/00-research-internship/001-3-d-reconstruction/kanban-3-d-reconstruction-from-stereo-images/","noteIcon":""}
 ---
+
 
 ## Completed Tasks
 
