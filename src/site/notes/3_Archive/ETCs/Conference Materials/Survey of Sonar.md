@@ -13,7 +13,7 @@ title: Sonar 조건
 
 ## BlueRobotics
 - [Sonoptix ECHO Multibeam Imaging Sonar](https://bluerobotics.com/store/sonars/imaging-sonars/sonoptix-echo/)
-	- [[Sonoptix_ECHO_Datasheet.pdf]]
+	- ![[Sonoptix_ECHO_Datasheet.pdf]]
 	- Price: $ 9,000
 	- ROS: [Official (expired)](https://github.com/bluerobotics/bluerov-ros-pkg)
 	- Frequency: 400 kHz (>30m) / 700 kHz (<30m)
