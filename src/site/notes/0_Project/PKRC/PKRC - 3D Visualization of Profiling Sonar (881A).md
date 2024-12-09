@@ -24,16 +24,19 @@ title: **Purpose**
 title: **Key Objectives**
 - [x] Cyclops 내부에서 881A ROS 코드 파악
 - [ ] 881A의 ROS msg 포맷 분석
-	- RViz에서 인식 가능한 `visualization_msgs/Marker` msg 형식으로 변환하기 위해 ROS msg에 어떤 데이터를 포함하고 있는지 분석
+	- RViz에서 인식 가능한 msg 형식으로 변환하기 위해 ROS msg에 어떤 데이터를 포함하고 있는지 분석
+	- Range, SectorWidth, TrainAngle, HeadPosition, ProfileRange 변수 의미 파악
 - [x] 881A를 사용하여 실험용 데이터를 Bagging
-- [ ] 881A의 1-D data를 3-D로 변환하기 위한 알고리즘 분석
-- [ ] 881A 데이터를 3-D로 변환하여 `visualization_msgs/Marker` msg 형식으로 변환 및 publish하는 ROS node 작성
+- [ ] 881A 데이터를 3-D로 변환하여 publish하는 ROS node 작성
+	- 881A 센서로 부터 얻어진 1D 데이터에서 각 픽셀의 Index를 센서와 반사 지점 사이의 실제 거리로 변환
+	- 극 좌표계를 직교 좌표계로 변환한 후 센서의 position과 orientation 정보를 사용하여 센서 기준 좌표계에서 global 좌표계로 변환
 ```
 
 <br/><br/>
 
 # Progress
 ## Code 분석
+- NAS: `연구관련 프로그램 및 코드/PKRC/Codes/ros_881a`<br/><br/>
 - `catkin_ws/src/ros_881a/src/ros_881a.cpp`
 	```cpp fold
 	int main(int argc, char **argv)
@@ -166,9 +169,12 @@ title: **Key Objectives**
 
 <br/><br/>
 
-## visualization_msgs/Marker message
+## Message Type
+### visualization_msgs/Marker
 
 - Reference: https://wiki.ros.org/rviz/DisplayTypes/Marker
+- Marker message에서 객체 타입을 `POINTS`로 하고, `geometry_msgs/Pose pose`에 임계값을 넘은 데이터들의 좌표 입력
+- 단점: Intensity를 반영할 수 없음
 
 	```plain fold
 	uint8 ARROW=0
@@ -215,11 +221,17 @@ title: **Key Objectives**
 	bool mesh_use_embedded_materials
 	```
 
+<br/>
+
+### sensor_msgs/PointCloud2
+- `pcl::PointCloud<pcl::PointXYZI>`로 intensity까지 데이터에 포함할 수 있는 객체를 생성하고 `pcl::toROSMsg`를 통해 ROS 메시지로 변환
+- 포인트 형태로 시각화 한다면 굳이 `visualization_msgs/Marker`를 사용할 필요가 없음
+
 <br/><br/>
 
 ## ROS Bag
 - 수상선의 Jetson Orin에 ros_881a 패키지를 빌드하고, `{bash} rosrun ros_881a ros_881a` 로 881A 동작
 - 결과 `ros_881a/data`, `ros_881a/ndata` 모두 정상적으로 publish 되었으며, ROS bagging 수행하였음
-- NAS: `/2024/2024_연구관련 프로그램 및 코드/04_김승민/2024-12-09-15-36-15.bag`
+- NAS: `연구관련 프로그램 및 코드/PKRC/Data`
 # Resource
 
