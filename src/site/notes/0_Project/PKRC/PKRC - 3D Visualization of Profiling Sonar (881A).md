@@ -170,6 +170,11 @@ typedef struct _Packet_881A
 <br/><br/>
 
 ## Data
+
+![[881A_v301_Manual.pdf]]
+
+![Pasted image 20241210154928.png](/img/user/3_Archive/1_Attachments/Pasted%20image%2020241210154928.png)
+
 - SONAR return data
 	![Pasted image 20241210151816.png](/img/user/3_Archive/1_Attachments/Pasted%20image%2020241210151816.png)
 	- Head position
