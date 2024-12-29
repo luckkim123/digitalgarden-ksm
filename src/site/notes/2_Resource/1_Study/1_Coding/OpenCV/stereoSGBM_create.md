@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/2-resource/1-study/1-coding/open-cv/stereo-sgbm-create/","tags":["Study/Camera/3D-Reconstruction","Project/Stereo2PCD"],"noteIcon":"","created":"2024-08-04"}
 ---
 
-- [[3_Archive/0_Fleeting Notes/Disparity Map (작성중)\|Disparity Map]]을 생성하기 위한 OpenCV 기반 Semi-global block matching 알고리즘
+- [[3_Archive/0_Fleeting Notes/Working Notes/Disparity Map (작성중)\|Disparity Map]]을 생성하기 위한 OpenCV 기반 Semi-global block matching 알고리즘
 
 <br/>
 
@@ -19,7 +19,7 @@ cv2.stereoSGBM_create(minDisparity, numDisparities, blockSize, P1, P2, disp12Max
 	- 항상 0보다 커야하며, 16 배수
 	- Depth estimation에서 Depth range 제한
 - `blockSize`
-	- [[3_Archive/0_Fleeting Notes/Disparity Map (작성중)#Block Matching\|Block Matching]]에 사용되는 블록의 크기
+	- [[3_Archive/0_Fleeting Notes/Working Notes/Disparity Map (작성중)#Block Matching\|Block Matching]]에 사용되는 블록의 크기
 	- 홀수이어야 하며, 항상 1 이상 (보통 3~11 사이 값)
 	- 작은 `blockSize`는 연산량이 작고 디테일을 잘 포착하지만 노이즈에 민감하며, 큰 `blockSize`는 연산량이 많고 디테일을 높칠 수 있지만 노이즈에 강인함 
 - `P1`, `P2`

@@ -11,7 +11,7 @@
 <br/>
 
 ## Depth Estimation
-- 3차원 거리 정보는 시차([[3_Archive/0_Fleeting Notes/Disparity Map (작성중)\|Disparity]]), 초점 거리(Focal length), 베이스라인(Baseline) 3가지 요소를 고려하여 얻을 수 있음
+- 3차원 거리 정보는 시차([[3_Archive/0_Fleeting Notes/Working Notes/Disparity Map (작성중)\|Disparity]]), 초점 거리(Focal length), 베이스라인(Baseline) 3가지 요소를 고려하여 얻을 수 있음
 	- Disparity: Depth estimation을 위한 두 이미지에서 객체의 위치(x축) 상의 차이
 	- Focal length: 이미지 평면(CCD, CMOS 센서)와 카메라 렌즈 사이의 거리
 	- Baseline: 좌우 카메라의 간격
